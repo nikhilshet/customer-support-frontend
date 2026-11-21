@@ -32,7 +32,7 @@ export function Chat() {
     const data = await response.json();
     console.log(response.status, data);
     setMessages((prev)=>{
-      return [...prev , {message: data.message, role: data.role}];
+      return [...prev , {message: data.ai_message, role: data.role}];
     })
   }
 
